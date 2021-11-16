@@ -7,9 +7,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-		<h1> hello post Detail</h1>
-		<p>UID : ${UID}</p>
+		
+		<h1> detail de l'article : </h1>
+		<p><strong>titre :</strong> ${titre}</p>
+		<p><strong>content:</strong> ${content}</p>
+		<h2>utilisateur coordonnée : </h2>
+		<p><strong>nom utilisateur:</strong> ${userName}</p>
+		<p><strong>email:</strong> ${email}</p>
+		<p><strong>age:</strong> ${age}</p>
+		<p><strong>role:</strong> ${role}</p>
 
 </body>
 </html>

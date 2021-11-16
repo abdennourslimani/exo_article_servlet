@@ -29,10 +29,10 @@ public class  PostListController extends HttpServlet{
 			//1) ServletOutputStream out = response.getOutputStream() ; 
 			
 		User user1 = new User("AZER13","user1",35,1,"user1@test.fr",true);
-		User user2 = new User("AZER52","user2",10,1,"user1@test.fr",false);
-		User user3 = new User("AZER56","user3",15,1,"user1@test.fr",false);
-		User user4 = new User("AZER132","user4",10,1,"user1@test.fr",true);
-		User user5 = new User("AZER53","user5",20,1,"user1@test.fr",false);
+		User user2 = new User("AZER52","user2",10,1,"user2@test.fr",false);
+		User user3 = new User("AZER56","user3",15,1,"user3@test.fr",false);
+		User user4 = new User("AZER132","user4",10,1,"user4@test.fr",true);
+		User user5 = new User("AZER53","user5",20,1,"user5@test.fr",false);
 
 		Post post1 = new Post("345FDG","title-Iposum1" ,"content  post 1 " ,user1 );
 		Post post2 = new Post("123FDG","title-Iposum2" ,"content  post 2 " ,user2 );

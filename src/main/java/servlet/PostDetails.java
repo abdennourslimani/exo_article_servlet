@@ -39,7 +39,7 @@
   
   for (int i = 0; i < postList.size(); i++) {
 	  
-	  if(postList.get(i).getUID() == UID ) {
+	  if(postList.get(i).getUID().equals(UID) ) {
   
 	  	postDetail = postList.get(i);
 	  	break; 
@@ -49,15 +49,22 @@
   
   
   
-	/*
-	 * if(postDetail==null) {
-	 * 
-	 * res.sendRedirect(this.getServletContext().getContextPath() + "/");
-	 * 
-	 * return ; }
-	 */
+	
+	  if(postDetail==null) {
+	  
+	  res.sendRedirect(this.getServletContext().getContextPath() + "/");
+	  
+	  return ; }
+	 
   
-  req.setAttribute("UID", postDetail.getUID());
+  req.setAttribute("titre", postDetail.getTitle());
+  req.setAttribute("content", postDetail.getContent());
+  req.setAttribute("userName", postDetail.getUser().getUserName());
+  req.setAttribute("email", postDetail.getUser().getEmail());
+  req.setAttribute("age", postDetail.getUser().getAge());
+  req.setAttribute("role", postDetail.getUser().isAdmin());
+
+
   
   // forward à la vue objet en question .
   
