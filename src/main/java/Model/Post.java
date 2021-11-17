@@ -2,7 +2,9 @@ package Model;
 
 public class Post {
 	private String UID ; 
-	
+	private String title ; 
+	private String content ; 
+	private User user ;
 	
 	
 	
@@ -31,9 +33,7 @@ public class Post {
 	public void setUID(String uID) {
 		UID = uID;
 	}
-	private String title ; 
-	private String content ; 
-	private User user ;
+
 	
 	
 	
