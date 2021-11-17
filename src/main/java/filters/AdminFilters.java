@@ -42,21 +42,32 @@ public class AdminFilters implements Filter {
 			throws IOException, ServletException {
 		HttpSession session = ((HttpServletRequest) request).getSession(); 
 
-	
-		
 		String user = (String)session.getAttribute("isAdmin");
 		
-		if(user.equals("user")) {
-			
-			chain.doFilter(request, response);	
+		if(user == null) {
+
+			HttpServletResponse resp = (HttpServletResponse) response;
+
+			resp.sendRedirect(((HttpServletRequest) request).getContextPath() +"/login.jsp" );
 			
 		}else {
 			
-			HttpServletResponse resp = (HttpServletResponse) response;
+			if(user.equals("user")) {
+				
+				chain.doFilter(request, response);	
+				
+			}else {
+				
+				HttpServletResponse resp = (HttpServletResponse) response;
 
-			resp.sendRedirect(((HttpServletRequest) request).getContextPath() +"/home-admin" );
+				resp.sendRedirect(((HttpServletRequest) request).getContextPath() +"/home-admin" );
+				
+			}
+			
 			
 		}
+		
+	
 		
 	}
 
