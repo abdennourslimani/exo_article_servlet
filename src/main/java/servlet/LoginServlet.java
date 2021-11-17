@@ -27,7 +27,7 @@ public class  LoginServlet extends HttpServlet{
 		
 		// creer un user :
 		HttpSession session = req.getSession(); 
-		User user = new User("ID1234ZE","abdennour",88,1,"user1@test.fr",false) ; 		
+		User user = new User("ID1234ZE","abdennour",88,1,"user1@test.fr",true) ; 		
 		
 		// valoriser les champs de la session
 				session.setAttribute("UID", user.getUID());		

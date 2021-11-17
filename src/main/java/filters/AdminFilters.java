@@ -20,7 +20,6 @@ import jakarta.servlet.http.HttpSession;
 		
 
 public class AdminFilters implements Filter {
-	User user = new User("ID1234ZE","abdennour",88,1,"user1@test.fr",true) ; 		
 
 			
 	public AdminFilters() {
@@ -54,19 +53,15 @@ public class AdminFilters implements Filter {
 			
 			if(user.equals("user")) {
 				
-				chain.doFilter(request, response);	
-				
-			}else {
-				
 				HttpServletResponse resp = (HttpServletResponse) response;
-
-				resp.sendRedirect(((HttpServletRequest) request).getContextPath() +"/home-admin" );
-				
+				resp.sendRedirect(((HttpServletRequest) request).getContextPath() +"/home" );
+				return;
 			}
 			
-			
+			chain.doFilter(request, response);	
+
 		}
-		
+
 	
 		
 	}
